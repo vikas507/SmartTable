@@ -1,0 +1,55 @@
+<html>
+<head>
+<style>
+div.fixed {
+    position:fixed;
+    top:100px;
+    left:600px;
+    width:2000px;
+}
+</style>
+<script src="https://code.angularjs.org/1.3.0-rc.2/angular.min.js"></script>
+<script>
+function click()
+{
+    header ("Location:table2.html");
+}
+</script>
+</head>
+<body ng-module ="app"><center><h2>LOGIN PAGE</h2></center>
+<div ng-controller="LoginController">
+   
+    <div class="container">
+ 
+<div class="fixed">
+    <div class="row">
+                <div class="panel-heading"></div>
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="input" class="col">Email:</label>
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control" id="input" placeholder="Email" required="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPass" class="col">Password:</label>
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control" id="inputPass" placeholder="Password" required="">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group last">
+                            <div class="col-sm-offset-3 col-sm-9">
+                                <button type="submit" class="btn" ng-click="click()">Sign in</button>
+                                <button type="reset" class="btn1">Reset</button>
+                                <br><br>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+        </div>
+     </div>
+</div>
+</body>
+</html># SmartTable table2.html table2.js

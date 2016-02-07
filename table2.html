@@ -1,0 +1,32 @@
+<html>
+<head>
+<title> Table2 </title>
+<script src="https://code.angularjs.org/1.3.0-rc.2/angular.min.js"></script>
+<script src="http://alasql.org/console/alasql.min.js"></script>
+ <script src="http://alasql.org/console/xlsx.core.min.js"></script>
+  <script src="table2.js"></script>
+</head>
+<body ng-app = "app">
+<div ng-controller="mainController">
+<th  colspan="5"> <input type="text" name="search" placeholder="Search Here" ng-model="search" > </th>
+<hr />
+<div class="container" id="exportable">
+
+<table name="rowCollection" border="1"  width="40%" >
+	<tr>
+		<th>Name</th>
+		<th>Designation</th>
+		<th>Email-id</th>
+	</tr>
+	
+	<tr ng-repeat="row in rowCollection  | filter: search">
+		<td>{{row.Name}}</td>
+		<td>{{row.Designation}}</td>
+		<td>{{row.Email}}</td>
+	</tr>
+</table>
+<br>
+<button ng-click="exportData()">Export</button>
+</div>
+</div>
+</body>
